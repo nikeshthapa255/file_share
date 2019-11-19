@@ -6,7 +6,8 @@
     {% if user.is_authenticated %}
         <h2>Hello {{ user.username }}</h2>
     {% else %}
-        <p>Hello Anonymous User</p>
+        <p>Please Register</p>
+        <a href="{% url 'anomymousfiles:home' %}"><button class="btn btn-primary" src>GO Anonymous File Share</button></a>
     {% endif %}
   </div>
 </div>

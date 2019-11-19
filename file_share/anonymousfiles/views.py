@@ -24,7 +24,3 @@ class AfileView(View):
 
         return render(request, self.template_name, {'form': form})
 
-def ShowFile(request, pk):
-    template=str(Afile.objects.get(pk=pk).fileloc)
-    
-    return redirect(template)
