@@ -1,0 +1,18 @@
+{% extends "iapp1/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        <ol>
+
+        {% for file in files%}
+        <li><a href="/media/{{file.fileloc}}">{{file.name}}</a></li>
+        {% endfor %}
+    </ol>
+
+    </div>
+</div>
+{% load static %}
+
+{% endblock %}

@@ -5,6 +5,10 @@
 
     {% if user.is_authenticated %}
         <h2>Hello {{ user.username }}</h2>
+        <a href="{% url 'userfiles:home' %}"><button class="btn btn-primary" src>File Upload</button></a>
+        <a href="{% url 'userfiles:show' %}"><button class="btn btn-info" src>Show Uploaded Files</button></a>
+        
+
     {% else %}
         <p>Please Register</p>
         <a href="{% url 'anomymousfiles:home' %}"><button class="btn btn-primary" src>GO Anonymous File Share</button></a>

@@ -1,0 +1,18 @@
+{% extends "iapp1/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="post" enctype="multipart/form-data" action="{% url 'userfiles:home' %}">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary" name="" value="Create">
+        </form>
+
+    </div>
+</div>
+{% load static %}
+
+{% endblock %}

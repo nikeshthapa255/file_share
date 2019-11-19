@@ -18,7 +18,7 @@ class AfileView(View):
         if form.is_valid():
             file=form.save()
             link=str(request.get_host())+"/media/"+str(file.fileloc)
-            return HttpResponse("YOUR LINK-"+link+("<br/><a href='{}'></a>".format(link)))
+            return HttpResponse("YOUR LINK-"+link+("<br/><a href='{}'></a>".format(link))+"\n your uploaded file will be removed in a day")
         else:
             print('Not Validates', request.POST, form.data['fileloc'])
 
